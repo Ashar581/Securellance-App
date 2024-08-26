@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/permission.css">
+    <title>User Permissions</title>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="popup" id="popup">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <div id="popupMessage"></div>
+    </div>
+    <div class="background">
+        <button class="back-btn" onclick="history.back()">
+            <img src="img/backbtn.png" alt="Back">
+        </button>
+        <div class="permissions-container">
+            <div class="permission">
+                <div class="checkbox-wrapper">
+                    <p>EMAIL</p>
+                    <button class="edit-btn" onclick="openModal()">Edit</button>
+                </div>
+            </div>
+            <div class="permission">
+                <div class="checkbox-wrapper">
+                    <label class="toggle">
+                        <input class="toggle__trigger visuallyhidden" type="checkbox" id="location-permission" />
+                        <span class="toggle__slider"></span>
+                        <p class="toggle__textwrapper">Location Permission</p>
+                    </label>
+                </div>
+            </div>
+            <div class="permission">
+                <div class="checkbox-wrapper">
+                    <label class="toggle">
+                        <input class="toggle__trigger visuallyhidden" type="checkbox" id="storage-permission" />
+                        <span class="toggle__slider"></span>
+                        <p class="toggle__textwrapper">Storage Permission</p>
+                    </label>
+                </div>
+            </div>
+            <div class="permission">
+                <div class="checkbox-wrapper">
+                    <label class="toggle">
+                        <input class="toggle__trigger visuallyhidden" type="checkbox" id="notifications-permission" />
+                        <span class="toggle__slider"></span>
+                        <p class="toggle__textwrapper">Notifications Permission</p>
+                    </label>
+                </div>
+            </div>
+            <div class="permission">
+                <div class="checkbox-wrapper">
+                    <label class="toggle">
+                        <input class="toggle__trigger visuallyhidden" type="checkbox" id="sms-permission" />
+                        <span class="toggle__slider"></span>
+                        <p class="toggle__textwrapper">SMS Permission</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <h2>Manage Email Permissions</h2>
+            <div class="email-list">
+                <!-- Existing emails will be displayed here -->
+            </div>
+            <div class="add-email">
+                <input type="email" id="new-email" placeholder="Enter email address">
+                <button onclick="addEmail()">Add</button>
+                <button onclick="closeModal()">Done</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/permission.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #adbbda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.back-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.greeting-section {
+    padding: 50px;
+    background-color: #ede8f5;
+    text-align: center;
+    color: #c8b7a6;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.greeting-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-section {
+    background-color: #8697c4;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    text-align: right;
+    width: 100%;
+}
+
+.profile-details .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.profile-details .label {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.profile-details .value {
+    flex: 2;
+    text-align: left;
+    background: none; /* Remove background color */
+    border: none; /* Remove border */
+    color: white; /* Ensure text color matches */
+}
+
+.profile-details hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 100%;
+    margin: 0;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.edit-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+#save-button {
+    background-color: #4caf50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#save-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .greeting-section {
+        order: 2;
+        padding: 20px;
+    }
+
+    .profile-section {
+        order: 1;
+        padding: 20px;
+    }
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Success and error classes for different popup styles */
+.popup.success {
+    border: 2px solid green;
+    color: green;
+}
+
+.popup.error {
+    border: 2px solid red;
+    color: red;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .popup {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+
+.popup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#popup-message-text {
+    flex: 1;
+}
+
+#popup-close-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#popup-close-button:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+.avatar {
+    position: relative;
+}
+
+#delete-picture-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: white; /* Optional: To ensure icon visibility */
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Indicator Styles */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

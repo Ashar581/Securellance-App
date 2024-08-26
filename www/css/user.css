@@ -1,0 +1,414 @@
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #E4F1FF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #b9cefeab;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Rest of the CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #e2eafc;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e2eafc;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 10px; /* Add border radius to the header */
+    margin-bottom: 20px; /* Add margin to create space below the header */
+}
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.welcome-message {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.emergency-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%; /* This makes the button circular */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 10px; /* Adjust the size as needed */
+    margin-right: 10px;
+    border: none; /* Remove border if any */
+    text-align: center;
+    vertical-align: middle;
+}.emergency-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%; /* This makes the button circular */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 10px; /* Adjust the size as needed */
+    margin-right: 10px;
+    border: 2px solid white; /* Add a circular boundary */
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logout-icon {
+    fill: black; /* Change this color to suit your design */
+    width: 100%;
+    height: 100%;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #e2eafc;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 30px;
+    border-block-color: #5c69ff;
+    padding: 5px;
+    gap: 10px; /* Add gap between buttons */
+    margin-bottom: 20px; /* Add margin to create space below the nav */
+}
+
+nav button {
+    flex: 1;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button.active,
+nav button:hover {
+    background-color: #ccdbfd;
+    border-radius: 30px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px; /* Add border radius to the main container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to the main container */
+    overflow: auto;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 670px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px;
+    background-color: #3d52a0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+
+.documents-list {
+    /* width: 100%; */
+    background-color: #c9dcffa1; /* Set a different background color for the document list portion */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.document {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.document div {
+    font-size: 14px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    width: 100%;
+    display: inline-block; /* Ensure the ellipsis works */
+}
+.document:hover {
+    background-color: #e9e9e9;
+}
+.show-all {
+    color: #007bff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 300px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+.popup.hide {
+    opacity: 0;
+}
+.popup .close-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    line-height: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.popup .close-btn:hover {
+    background-color: white;
+    color: red;
+}
+        
+#loadingBar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3498db;
+    z-index: 1000; /* Ensure it sits above other content */
+    animation: loading 2s linear infinite; /* Simple loading animation */
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+#map {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    margin-top: 20px; /* Add some space above the map */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-right: 10px; /* Space between the file button and the upload button */
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #e9e9f9;
+}
+
+#file {
+    display: none;
+}
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px; /* Ensure space between delete button and file name */
+}
+
+.file-name {
+    flex-grow: 1;
+    cursor: pointer;
+    text-align: left;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* CSS for PDF iframe on mobile */
+@media (max-width: 600px) {
+    .file-content iframe {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
+

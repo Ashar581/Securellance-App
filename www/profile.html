@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>Profile Page</title>
+</head>
+<body>
+    <div class="profile-container">
+        <button class="back-btn" onclick="history.back()">
+            <img src="img/backbtn.png" alt="Back">
+        </button>
+        <div class="greeting-section">
+            <!-- <img src="images/image.png" alt="MESSAGE"> -->
+        </div>
+        <div class="profile-section">
+            <div class="avatar">
+                <img id="profile-picture" src="img/user.jpg" alt="User Avatar">
+                <input type="file" id="upload-picture" style="display:none" accept="image/*">
+                <!-- Add Delete Icon -->
+                <img id="delete-picture-icon" src="img/delete.png" alt="Delete Picture" style="cursor: pointer; width: 24px; height: 24px;">
+            </div>
+            <div class="profile-details">
+                <div class="detail">
+                    <p class="label">Name:</p>
+                    <input type="text" id="name" class="value" readonly>
+                </div>
+                <hr>
+                <div class="detail">
+                    <p class="label">Email:</p>
+                    <input type="text" id="email" class="value" readonly>
+                </div>
+                <hr>
+                <div class="detail">
+                    <p class="label">Contact No.:</p>
+                    <input type="text" id="contact" class="value" readonly>
+                </div>
+                <hr>
+                <div class="detail">
+                    <p class="label">Home Location:</p>
+                    <input type="text" id="home-location" class="value" readonly>
+                </div>
+                <hr>
+                <div class="detail">
+                    <p class="label">Office Location:</p>
+                    <input type="text" id="office-location" class="value" readonly>
+                </div>
+            </div>
+            <div class="edit-icon">
+                <img src="img/edit3.jpg" alt="Edit Profile" id="edit-icon" style="cursor: pointer;">
+            </div>
+            <button id="save-button" style="display:none">Save</button>
+        </div>
+    </div>
+    <div id="popup-message" class="popup hidden">
+        <div class="popup-content">
+            <span id="popup-message-text"></span>
+            <button id="popup-close-button">Close</button>
+        </div>
+    </div>
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
